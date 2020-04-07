@@ -1,0 +1,18 @@
+@import '../../config.scss';
+
+.page-header {
+    height: $headerHeight;
+    padding: $spacingSmall;
+    color: $colorWhite;
+    display: flex;
+    box-shadow: $boxShadow;
+    background-color: $colorCornField;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page-header__logo {
+    height: 100%;
+}

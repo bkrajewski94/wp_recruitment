@@ -1,7 +1,8 @@
 @import '../node_modules/reset-css/reset.css';
+@import './config.scss';
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $fontFamilyDefault;
   height: 100%;
 }
 
