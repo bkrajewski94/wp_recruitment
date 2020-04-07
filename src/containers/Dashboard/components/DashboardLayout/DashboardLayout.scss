@@ -1,0 +1,15 @@
+@import '../../../../utils/config.scss';
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, spacing(34));
+  grid-auto-rows: spacing(22);
+  grid-gap: $spacingNormal;
+}
+
+.dashboard-layout__main-element {
+    @include atDesktop {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+}
