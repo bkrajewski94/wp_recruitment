@@ -1,36 +1,35 @@
-import {graphql, compose} from "react-apollo";
-import gql from "graphql-tag";
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
 
 const mainArticlesQuery = gql`
-    query mainArticlesQuery($limit: Int, $t: [ArticleType]!) {
-        tileset(limit: $limit, t:$t) {
-            title,
-        }
+  query mainArticlesQuery($limit: Int, $t: [ArticleType]!) {
+    tileset(limit: $limit, t: $t) {
+      id
+      title
+      img {
+        original_url
+        b64
+      }
     }
+  }
 `;
 
 const withMainArticles = graphql(mainArticlesQuery, {
-    props: (props) => {
-        const {data, ownProps} = props;
-        console.group(data);
-        return {
-            // allContactLists: data.allContactLists ? data.allContactLists.results : [],
-            // selectedContactLists: data.selectedContactLists ? data.selectedContactLists : {},
-            // contactListsDataLoading: !data.allContactLists,
-            // refetchContactListsData : data.refetch,
-            // ...ownProps
-            data
-        }
+  props: (props) => {
+    const { data, ownProps } = props;
+    return {
+      mainArticles: data.tileset ? data.tileset : [],
+      mainArticlesLoading: !data.tileset,
+      ...ownProps,
+    };
+  },
+  options: (props) => ({
+    variables: {
+      limit: 9,
+      t: 'Article',
     },
-    options: (props) => ({
-        variables: {
-            limit: 9,
-            t: "Article",
-        },
-        fetchPolicy: "network-only"
-    })
+    fetchPolicy: 'network-only',
+  }),
 });
 
-export const withDashboardQueries = compose(
-    withMainArticles
-);
+export const withDashboardQueries = withMainArticles;

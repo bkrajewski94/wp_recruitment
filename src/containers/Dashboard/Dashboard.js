@@ -1,13 +1,12 @@
 import React from 'react';
-import {compose} from "@apollo/react-common";
 
-import {DashboardLayout} from "./components/DashboardLayout/DashboardLayout";
-import {withDashboardQueries} from "./graphql/DashboardQueries";
+import { DashboardLayout } from './components/DashboardLayout/DashboardLayout';
+import { withDashboardQueries } from './graphql/DashboardQueries';
 
-const DashboardComponent = () => {
-  return (
-    <DashboardLayout />
-  );
+const DashboardComponent = ({mainArticlesLoading, mainArticles}) => {
+  if(mainArticlesLoading) return null;
+
+  return <DashboardLayout mainArticles={mainArticles}/>;
 };
 
-export const Dashboard = compose(withDashboardQueries)(DashboardComponent)
+export const Dashboard = withDashboardQueries(DashboardComponent);

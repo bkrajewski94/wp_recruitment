@@ -1,4 +1,5 @@
 export const URLS = {
-    DEFAULT: "/",
-    ARTICLE: "/article/:articleId/"
-}
+  DEFAULT: '/',
+  ARTICLE: '/article/:articleId/',
+};
+
