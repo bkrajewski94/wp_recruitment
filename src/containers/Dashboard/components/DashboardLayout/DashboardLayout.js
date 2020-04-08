@@ -10,7 +10,7 @@ export const DashboardLayout = ({mainArticles}) => {
     <div className="dashboard-layout">
         {mainArticles.map((article, i) => (
             <div key={article.id} tabIndex="1" className={classNames("dashboard-layout__element", i === 0 && "dashboard-layout__element--primary")}>
-                <Link to={`/article/${article.id}`} className="dashboard-layout__element-link">
+                <Link to={`/article?url=${article.url}`} className="dashboard-layout__element-link">
                     <img src={article.img.original_url} alt="" className="dashboard-layout__element-image"/>
                     <div className="dashboard-layout__element-title">
                         {article.title}

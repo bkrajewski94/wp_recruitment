@@ -1,0 +1,34 @@
+@import '../../utils/config.scss';
+
+.article__main-header {
+    font-size: $fontSizeLarge;
+    line-height: 1.25;
+    margin-bottom: $spacingBig;
+    font-weight: $fontWeightBold;
+}
+
+.article__description {
+    font-size: $fontSizeBig;
+    line-height: 1.25;
+    margin: $spacingBig 0;
+}
+
+.article__image-wrapper {
+    padding: $spacingBig;
+    background-color: $colorCornField;
+}
+
+.article__image {
+    width: 100%;
+}
+
+.article__image-description {
+    color: $colorDustyGray;
+    font-size: $fontSizeSmall;
+    margin-top: $spacingSmall;
+}
+
+.article__content {
+    margin: $spacingBig 0;
+    line-height: 1.25;
+}

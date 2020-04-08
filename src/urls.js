@@ -1,5 +1,5 @@
 export const URLS = {
   DEFAULT: '/',
-  ARTICLE: '/article/:articleId/',
+  ARTICLE: '/article',
 };
 

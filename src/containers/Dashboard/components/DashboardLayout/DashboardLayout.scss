@@ -5,6 +5,9 @@
   grid-template-columns: repeat(auto-fit, spacing(34));
   grid-auto-rows: spacing(22);
   grid-gap: $spacingNormal;
+  padding: $spacingBig $spacingNormal;
+  background: $colorCornField;
+  justify-content: center;
 }
 
 .dashboard-layout__element {
@@ -18,8 +21,8 @@
 
 .dashboard-layout__element--primary {
   @include atDesktop {
-      grid-column: 1/3;
-      grid-row: 1/3;
+    grid-column: 1/3;
+    grid-row: 1/3;
   }
 }
 
@@ -40,6 +43,6 @@
   font-size: $fontSizeNormal;
   font-weight: $fontWeightBold;
   color: $colorWhite;
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   text-decoration: inherit;
 }
