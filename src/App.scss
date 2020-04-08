@@ -1,0 +1,18 @@
+@import '../node_modules/reset-css/reset.css';
+@import './utils/config.scss';
+
+body {
+  font-family: $fontFamilyDefault;
+  height: 100%;
+}
+
+#root,
+html {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,12 @@
+@import '../../utils/config.scss';
+
+$pagePadding: 40px;
+
+.page-content {
+    padding-top: $headerHeight + $pagePadding;
+    padding-bottom: $pagePadding;
+    width: 90%;
+    max-width: $pageWidth;
+    margin: auto;
+}
+

@@ -1,16 +1,18 @@
 import React from 'react';
 
 import { Routes } from './Routes';
+import { PageHeader } from './components/PageHeader/PageHeader';
+import { PageContent } from './components/PageContent/PageContent';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
     <div>
-      <div>Header</div>
-      <div>
+      <PageHeader />
+      <PageContent>
         <Routes />
-      </div>
+      </PageContent>
     </div>
   );
 }
