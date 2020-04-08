@@ -6,9 +6,9 @@ const mainArticlesQuery = gql`
     tileset(limit: $limit, t: $t) {
       id
       title
+      url
       img {
         original_url
-        b64
       }
     }
   }

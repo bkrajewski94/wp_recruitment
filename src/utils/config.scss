@@ -7,10 +7,12 @@ $pageWidth: 978px;
 
 $spacingSmall: 0.5rem;
 $spacingNormal: 1rem;
+$spacingBig: 1.5rem;
 
 $color-portGore: #25265e;
 $colorWhite: #ffffff;
 $colorCornField: #fafad2;
+$colorDustyGray: #9C9695;
 
 $fontFamilyDefault: 'Assistant', sans-serif;
 
@@ -18,9 +20,11 @@ $fontWeightNormal: 400;
 $fontWeightLight: 300;
 $fontWeightBold: 600;
 
+$fontSizeSmall: 0.75rem;
 $fontSizeNormal: 1rem;
-$fontSizeBig: 1.5rem;
+$fontSizeBig: 1.25rem;
 $fontSizeLarge: 2rem;
+$fontSizeHuge: 3rem;
 
 $boxShadow: 0 4px 20px 0 rgba($color-portGore, 0.1);
 $textShadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
