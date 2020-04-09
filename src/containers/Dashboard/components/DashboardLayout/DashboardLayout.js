@@ -14,7 +14,6 @@ export const DashboardLayout = ({
   fetchMoreArticles,
 }) => {
   const [offset, setOffset] = useState(LIMIT);
-  console.log(articles);
   const onLoadMore = () => {
     fetchMoreArticles({
       variables: {
