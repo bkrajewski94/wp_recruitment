@@ -28,7 +28,7 @@ export const withArticle = graphql(articleQuery, {
   },
   options: (props) => {
     const params = new URLSearchParams(props.location.search);
-    console.log(params.get('url'));
+    
     return {
       variables: {
         url: params.get('url'),
