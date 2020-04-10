@@ -1,3 +1,15 @@
+## Review notes
+
+Projects works offline (service workers are enabled) only for production build
+
+Running the app in production build:
+
+npx serve (https://www.npmjs.com/package/serve)
+npm run build
+serve -s build
+
+## Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
