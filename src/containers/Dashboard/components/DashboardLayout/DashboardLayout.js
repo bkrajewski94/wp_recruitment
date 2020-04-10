@@ -14,7 +14,6 @@ export const DashboardLayout = ({
   fetchMoreArticles,
 }) => {
   const [offset, setOffset] = useState(LIMIT);
-  console.log(articles);
   const onLoadMore = () => {
     fetchMoreArticles({
       variables: {
@@ -30,7 +29,8 @@ export const DashboardLayout = ({
       setOffset((prevOffset) => prevOffset + LIMIT);
     });
   };
-
+  console.log(mainArticles);
+  console.log(articles);
   return (
     <InfiniteScroll
       initialLoad={false}
@@ -41,6 +41,7 @@ export const DashboardLayout = ({
       <div className="dashboard-layout__box dashboard-layout__box--main">
         {mainArticles.map((article, i) => (
           <Link
+            key={article.id}
             to={`/article?url=${article.url}`}
             className={classNames(
               'dashboard-layout__element-link',
@@ -48,7 +49,6 @@ export const DashboardLayout = ({
             )}
           >
             <div
-              key={article.id}
               tabIndex="1"
               className="dashboard-layout__element"
             >
@@ -69,11 +69,11 @@ export const DashboardLayout = ({
       <div className="dashboard-layout__box">
         {articles.map((article, i) => (
           <Link
+            key={article.id}
             to={`/article?url=${article.url}`}
             className="dashboard-layout__element-link"
           >
             <div
-              key={article.id}
               tabIndex="1"
               className="dashboard-layout__element"
             >
