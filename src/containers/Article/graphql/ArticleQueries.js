@@ -35,7 +35,7 @@ export const withArticle = graphql(articleQuery, {
       variables: {
         url: params.get('url'),
       },
-      fetchPolicy: 'network-only',
+      fetchPolicy: 'cache-first',
     };
   },
 });

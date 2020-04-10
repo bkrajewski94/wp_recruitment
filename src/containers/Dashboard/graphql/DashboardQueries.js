@@ -34,7 +34,7 @@ const withMainArticles = graphql(mainArticlesQuery, {
 
 
 const articlesQuery = gql`
-  query mainArticlesQuery($limit: Int, $t: [ArticleType]!, $offset: Int) {
+  query articlesQuery($limit: Int, $t: [ArticleType]!, $offset: Int) {
     articles(limit: $limit, t: $t, offset: $offset) {
       id
       title
