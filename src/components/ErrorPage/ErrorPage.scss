@@ -1,0 +1,21 @@
+@import '../../utils/config.scss';
+
+.error-page {
+  text-align: center;
+}
+
+.error-page__header {
+  font-size: $fontSizeHuge;
+  margin-bottom: $spacingBig;
+}
+
+.error-page__description {
+  font-size: $fontSizeBig;
+  margin-bottom: $spacingNormal;
+}
+
+.error-page__image {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: $spacingNormal;
+}

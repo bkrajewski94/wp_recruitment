@@ -29,8 +29,7 @@ export const DashboardLayout = ({
       setOffset((prevOffset) => prevOffset + LIMIT);
     });
   };
-  console.log(mainArticles);
-  console.log(articles);
+
   return (
     <InfiniteScroll
       initialLoad={false}
@@ -48,10 +47,7 @@ export const DashboardLayout = ({
               i === 0 && 'dashboard-layout__primary-element'
             )}
           >
-            <div
-              tabIndex="1"
-              className="dashboard-layout__element"
-            >
+            <div tabIndex="1" className="dashboard-layout__element">
               {article.img && ( //Some articles return null as img
                 <img
                   src={article.img.original_url}
@@ -73,10 +69,7 @@ export const DashboardLayout = ({
             to={`/article?url=${article.url}`}
             className="dashboard-layout__element-link"
           >
-            <div
-              tabIndex="1"
-              className="dashboard-layout__element"
-            >
+            <div tabIndex="1" className="dashboard-layout__element">
               {article.img && ( //Some articles return null as img
                 <img
                   src={article.img.original_url}
@@ -97,4 +90,6 @@ export const DashboardLayout = ({
 
 DashboardLayout.propTypes = {
   mainArticles: PropTypes.array.isRequired,
+  articles: PropTypes.array.isRequired,
+  fetchMoreArticles: PropTypes.func.isRequired,
 };

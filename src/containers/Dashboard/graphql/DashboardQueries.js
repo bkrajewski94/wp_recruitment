@@ -20,6 +20,7 @@ const withMainArticles = graphql(mainArticlesQuery, {
     return {
       mainArticles: data.mainArticles ? data.mainArticles : [],
       mainArticlesLoading: !data.mainArticles,
+      error: data.error,
       ...ownProps,
     };
   },
