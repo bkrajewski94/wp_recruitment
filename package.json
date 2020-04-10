@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "apollo-boost": "^0.4.7",
+    "apollo-cache-persist": "^0.1.1",
     "classnames": "^2.2.6",
     "graphql": "^15.0.0",
     "react": "^16.13.1",
@@ -15,7 +16,8 @@
     "react-dom": "^16.13.1",
     "react-infinite-scroller": "^1.2.4",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "save": "^2.4.0"
   },
   "scripts": {
     "start": "react-app-rewired start",

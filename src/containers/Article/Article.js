@@ -17,7 +17,7 @@ const ArticleComponent = ({ article, isLoading }) => {
         <h4 className="article__description">{description.data}</h4>
         <div className="article__image-wrapper">
             <img className="article__image" src={article.img.original_url} alt={article.title} />
-            <div>
+            <div className="article__image-description">
                 Author: {article.img.author}, source: {article.img.source}
             </div>
         </div>

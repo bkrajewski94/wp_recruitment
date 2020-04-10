@@ -28,7 +28,6 @@ const withMainArticles = graphql(mainArticlesQuery, {
       limit: 9,
       t: 'Article',
     },
-    fetchPolicy: 'network-only',
   }),
 });
 
@@ -65,7 +64,6 @@ export const withArticles = graphql(articlesQuery, {
       t: 'Article',
       offset: 0
     },
-    fetchPolicy: 'network-only',
   }),
 });
 

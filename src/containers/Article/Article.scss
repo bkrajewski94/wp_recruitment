@@ -31,4 +31,8 @@
 .article__content {
     margin: $spacingBig 0;
     line-height: 1.25;
+
+    img {
+        max-width: 100%;
+    }
 }

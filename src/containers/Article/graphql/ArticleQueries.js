@@ -20,6 +20,7 @@ const articleQuery = gql`
 export const withArticle = graphql(articleQuery, {
   props: (props) => {
     const { data, ownProps } = props;
+
     return {
       article: data.article ? data.article : {},
       isLoading: !data.article,
@@ -33,7 +34,7 @@ export const withArticle = graphql(articleQuery, {
       variables: {
         url: params.get('url'),
       },
-      fetchPolicy: 'network-only',
+      // fetchPolicy: 'network-only',
     };
   },
 });
