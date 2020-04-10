@@ -8,7 +8,7 @@ import './PageHeader.scss';
 
 export const PageHeader = ({children}) => (
   <div className="page-header">
-      <Link to={URLS.DEFAULT}>
+      <Link className="page-header__logo-wrapper" to={URLS.DEFAULT}>
         <img src={logo} alt="Logo" className="page-header__logo"/>
       </Link>
       {children}

@@ -24,6 +24,7 @@ export const withArticle = graphql(articleQuery, {
     return {
       article: data.article ? data.article : {},
       isLoading: !data.article,
+      error: data.error,
       ...ownProps,
     };
   },
@@ -34,7 +35,7 @@ export const withArticle = graphql(articleQuery, {
       variables: {
         url: params.get('url'),
       },
-      // fetchPolicy: 'network-only',
+      fetchPolicy: 'network-only',
     };
   },
 });
